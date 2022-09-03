@@ -17,3 +17,6 @@ Route::get('/getAllTagsWithPost/{id}',[HomeController::class,'getAllTags']);
 Route::get('/createTags/{id}',[HomeController::class,'createTags']);
 Route::get('/getAllPostsWithTag/{id}',[HomeController::class,'getAllPosts']);
 
+// Has Many Through
+Route::get('/getAllPostWithPhoto/{id}',[HomeController::class,'getAllPostWithPhoto']);
+

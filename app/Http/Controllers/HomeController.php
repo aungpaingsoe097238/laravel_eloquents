@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Photo;
 use App\Models\Post;
 use App\Models\Tag;
 use App\Models\User;
@@ -45,6 +46,11 @@ class HomeController extends Controller
         $tag = Tag::findOrFail($id);
         return $tag->posts;
 
+    }
+
+    public function getAllPostWithPhoto($id){
+        $photo = Photo::findOrFail($id);
+        return $photo->posts;
     }
 
 }
